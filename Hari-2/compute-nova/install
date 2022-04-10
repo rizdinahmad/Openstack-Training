@@ -1,0 +1,9 @@
+# On node compute
+
+- install nova compute
+apt install nova-compute
+
+- konfigurasi nova
+vim /etc/nova/nova.conf
+vim /etc/nova/nova-compute.conf
+systemctl restart nova-compute
