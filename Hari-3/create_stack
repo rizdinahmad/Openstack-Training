@@ -1,0 +1,4 @@
+# On node controller
+
+- create stack
+openstack stack create -t demo-template.yml --parameter "NetID=35ae9892-46a3-48ac-9707-a943d7fcbc9c" stack
