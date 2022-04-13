@@ -4,6 +4,7 @@
 apt install cinder-api cinder-scheduler
 
 - konfigurasi cinder
+echo " " > /etc/cinder/cinder.conf 
 vim /etc/cinder/cinder.conf
 su -s /bin/sh -c "cinder-manage db sync" cinder
 
