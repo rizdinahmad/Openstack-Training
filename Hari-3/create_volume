@@ -5,9 +5,11 @@ openstack volume create --size 5 vol1
 
 - attach volume to instance
 openstack server add volume vm_id vol-id --device /dev/vdb
-openstack server remove volume volume vm_id vol-id
+# ganti vm_id dan vol_id di server dan volume list pada controller
 
 - resize volume
+# hapus dulu volume yg exist, resize tidak bisa downgrade 
+openstack server remove volume vm_id vol-id
 openstack volume set --size 10 vol1
 
 - delete volume
