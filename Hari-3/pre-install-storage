@@ -16,7 +16,7 @@ netplan apply
 - set hostname
 hostnamectl set-hostname storage
 
-- set /etc/hosts
+- set /etc/hosts (optional)
 #...
 10.30.100.1 controller
 10.30.100.2 compute
