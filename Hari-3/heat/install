@@ -7,5 +7,13 @@ apt-get install heat-api heat-api-cfn heat-engine && pip install python-vitragec
 vim /etc/heat/heat.conf
 systemctl restart heat*
 
+- sync file
+su -s /bin/sh -c "heat-manage db_sync" heat
+
+- restart service
+service heat-api restart
+service heat-api-cfn restart
+service heat-engine restart
+
 - verifikasi
 openstack orchestration service list
