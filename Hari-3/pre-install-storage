@@ -29,7 +29,10 @@ timedatectl set-timedate Asia/Jakarta
 apt install chrony
 vim /etc/chrony/chrony.conf
 #...
-server controller iburst
+	   server 0.id.pool.ntp.org
+	   server 1.id.pool.ntp.org
+	   server 2.id.pool.ntp.org
+	   server 3.id.pool.ntp.org
 #...
 systemctl restart chrony
 chronyc sources
