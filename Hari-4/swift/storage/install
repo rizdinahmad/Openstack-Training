@@ -1,0 +1,9 @@
+# On node storage
+
+- install swift
+apt -y install swift swift-account swift-container swift-object xfsprogs 
+
+- create partition
+- copy file ring 
+- konfigurasi file
+- restart service
