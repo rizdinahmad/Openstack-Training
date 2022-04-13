@@ -5,10 +5,10 @@ openstack volume create --size 5 vol1
 
 - attach volume to instance
 openstack server add volume vm_id vol-id --device /dev/vdb
-openstack server remove volume volume vm_id vol-id
+openstack server remove volume vm_id vol-id
 
 - resize volume
 openstack volume set --size 10 vol1
 
 - delete volume
-openstack volume set --size 5 vol1
+openstack volume delete vol1
