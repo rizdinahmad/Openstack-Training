@@ -40,12 +40,13 @@ sudo cp octavia/etc/dhcp/dhclient.conf /etc/dhcp/octavia
 - create network
 OCTAVIA_MGMT_SUBNET=10.16.0.0/12
 OCTAVIA_MGMT_SUBNET_START=10.16.0.100
-OCTAVIA_MGMT_SUBNET_END=10.16.31.254
+OCTAVIA_MGMT_GATEWAY=10.16.0.254
+OCTAVIA_MGMT_SUBNET_END=10.16.31.253
 OCTAVIA_MGMT_PORT_IP=10.16.0.2
 
-openstack network create lb-mgmt-net
-openstack subnet create --subnet-range $OCTAVIA_MGMT_SUBNET --allocation-pool \
-  start=$OCTAVIA_MGMT_SUBNET_START,end=$OCTAVIA_MGMT_SUBNET_END \
+openstack network create --provider-network-type vxlan lb-mgmt-net
+openstack subnet create --subnet-range $OCTAVIA_MGMT_SUBNET  --gateway $OCTAVIA_MGMT_GATEWAY  \
+  --allocation-pool start=$OCTAVIA_MGMT_SUBNET_START,end=$OCTAVIA_MGMT_SUBNET_END \
   --network lb-mgmt-net lb-mgmt-subnet
 
 SUBNET_ID=$(openstack subnet show lb-mgmt-subnet -f value -c id)
