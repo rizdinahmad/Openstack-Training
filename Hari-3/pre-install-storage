@@ -1,3 +1,6 @@
+# Pada hari ke - 3 membuat snapshot dari vm controller hari ke 2 tujuan antisipasi kesalahan konfig di horizon yang beresiko error disk
+# membuat vm baru dengan spek cpu 2 | memory 8 | Disk 1 20GB | disk 2 50GB | disk 3 10GB | disk 4 10GB | Disk 5 10GB
+
 # On node storage
 - update & upgrade
 apt clean all && apt update -y && apt upgrade -y
