@@ -1,0 +1,16 @@
+# On node controller
+
+- verifikasi swift
+swift stat
+
+- create container
+openstack container create test-container
+
+- upload object to container
+openstack object create test-container file.txt
+
+- download object from container
+openstack object save test-container file.txt
+
+- list object
+openstack object list test-container
