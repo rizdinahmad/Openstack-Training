@@ -9,3 +9,7 @@ systemctl reload apache2.service
 
 - verifikasi
 http://10.30.100.1/horizon
+
+### additional
+- install heat dashboard
+apt install python3-heat-dashboard
