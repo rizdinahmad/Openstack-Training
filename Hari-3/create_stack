@@ -1,4 +1,23 @@
 # On node controller
 
+- buat template format .yml
+//isi script dibawah ini//
+vim template.yml
+
+heat_template_version: 2018-03-02
+description: Simple template to deploy a single compute instance
+
+resources:
+  my_instance:
+    type: OS::Nova::Server
+    properties:
+      key_name: rizdin_key
+      image: ubuntu18
+      flavor: m1.small
+      networks:
+        - network: public
+// end //
+# note: image, flavor dan network sesuaikan dengan naming yang ada di controller
+
 - create stack
 openstack stack create -t demo-template.yml --parameter "NetID=35ae9892-46a3-48ac-9707-a943d7fcbc9c" stack
