@@ -1,0 +1,13 @@
+# On node controller
+
+- cek service
+openstack volume service list
+swift stat
+
+- backup volume
+openstack volume backup create --name backup_vol vol
+openstack volume backup list
+
+- restore volume
+openstack volume backup restore backup_vol vol 
+openstack volume list

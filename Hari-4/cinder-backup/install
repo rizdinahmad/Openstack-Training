@@ -1,0 +1,10 @@
+# On node storage
+
+- install cinder-backup
+apt install cinder-backup
+
+- konfigurasi
+vim /etc/cinder/cinder.conf
+
+- restart service
+systemctl restart cinder-backup
