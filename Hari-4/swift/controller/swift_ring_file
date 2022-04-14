@@ -30,8 +30,8 @@ swift-ring-builder /etc/swift/object.builder add r0z0-storage:6000/sdc 100
 swift-ring-builder /etc/swift/object.builder add r0z0-storage:6000/sdd 100
 swift-ring-builder /etc/swift/object.builder add r0z0-storage:6000/sde 100
 
-swift-ring-builder /etc/swift/container.builder
-swift-ring-builder /etc/swift/container.builder rebalance
+swift-ring-builder /etc/swift/object.builder
+swift-ring-builder /etc/swift/object.builder rebalance
 
 - ubah permission
 chown swift. /etc/swift/*.gz 
